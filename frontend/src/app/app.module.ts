@@ -8,14 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GetUserComponent } from './get-user/get-user.component';
 import { PostUserComponent } from './post-user/post-user.component';
-import { PutPatchUserComponent } from './put-patch-user/put-patch-user.component';
+import { PutUserComponent } from './put-user/put-user.component';
+import { PatchUserComponent } from './patch-user/patch-user.component';
 
 const routes: Routes=[
   {path:'', redirectTo:'/users', pathMatch:'full'},
   {path:'users', component:GetUserComponent},
   {path:'users/get-user', component:PostUserComponent},
-  {path:'users/put-user/:id', component:PutPatchUserComponent},
-  {path:'users/patch-user/:id', component:PutPatchUserComponent}
+  {path:'users/put-user/:id', component:PutUserComponent},
+  {path:'users/patch-user/:id', component:PatchUserComponent}
 ]
 
 @NgModule({
@@ -23,7 +24,8 @@ const routes: Routes=[
     AppComponent,
     GetUserComponent,
     PostUserComponent,
-    PutPatchUserComponent
+    PutUserComponent,
+    PatchUserComponent
   ],
   imports: [
     BrowserModule,

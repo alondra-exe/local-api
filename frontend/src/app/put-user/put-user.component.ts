@@ -4,11 +4,11 @@ import { UserApiService } from '../services/userapi.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-put-patch-user',
+  selector: 'app-put-user',
   templateUrl: './put-user.component.html',
-  styleUrls: ['./put-patch-user.component.css']
+  styleUrls: ['./put-user.component.css']
 })
-export class PutPatchUserComponent implements OnInit {
+export class PutUserComponent implements OnInit {
   user: User = new User();
 
   constructor(
@@ -17,7 +17,6 @@ export class PutPatchUserComponent implements OnInit {
     private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.fillData();
   }
 
   fillData(): void {
@@ -38,13 +37,4 @@ export class PutPatchUserComponent implements OnInit {
       response => this.router.navigate(['/users'])
     )
   }
-
-  patchUser(): void {
-    console.log(this.user);
-    this.userapi.patchUser(this.user).subscribe(
-      response => this.router.navigate(['/users'])
-    )
-  }
-
-
 }
