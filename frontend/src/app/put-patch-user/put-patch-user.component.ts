@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-put-patch-user',
-  templateUrl: './put-patch-user.component.html',
+  templateUrl: './put-user.component.html',
   styleUrls: ['./put-patch-user.component.css']
 })
 export class PutPatchUserComponent implements OnInit {
