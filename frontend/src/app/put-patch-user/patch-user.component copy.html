@@ -1,0 +1,10 @@
+<form class="form-container">
+    <h2>EDIT USER (PATCH)</h2>
+    <label for="name">NAME</label>
+    <input type="text" required name="name" [(ngModel)]="user.name">
+    <br />
+    <label for="email">E-MAIL</label>
+    <input type="email" required name="email" [(ngModel)]="user.email">
+    <br />
+    <input type="submit" role="button" (click)="patchUser()" value="EDIT">
+</form>
